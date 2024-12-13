@@ -10,7 +10,7 @@ fs.readFile('palabra.txt', 'utf-8', (err, data) => {
     }
 
     const caracteres_Especiales = [';', ':', "'", '=', '(', ')', '"','*', '.', ' ', '@', '[', ']', '|', '\n', '\r',',']
-    const abcd = ['a', 'b', 'c', 'd', 'e', 'f']
+    const abcd = ['a', 'b', 'c', 'd']
     let arraySpliteado = [];
     let cadenasDeTexto = [];
     let palabra = "";
@@ -41,8 +41,18 @@ fs.readFile('palabra.txt', 'utf-8', (err, data) => {
         const palabras = arraySpliteado[i];
         // console.log(palabras);
         
+        
+
         for (let j = 0; j < palabras.length; j++) {
             const letras = palabras[j]
+
+            if (abcd.includes(letras)) {
+                // console.log(palabras);
+                
+                // arraySpliteado.splice(1, 0, palabras)
+                // console.log(arraySpliteado);
+                
+            }
 
             // console.log(letras);
             // console.log(arraySpliteado[j]);
